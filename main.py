@@ -1,5 +1,5 @@
 
-def cria_vetor():
+def novo_array():
     v = []
     n = int(input('Informe quantos valores deseja armazenar:\n'))
     for i in range(n):
@@ -13,12 +13,12 @@ def maior_dif(v):
     dif = maior - menor
     return print(f'A maior diferença é {dif}')
 
-def ordem_crescente(v):
+def ordem(v):
     for i in range(1, len(v)):
         if v[i] < v[i - 1]:
             return False
     return True
 
-v = cria_vetor()
+v = novo_array()
 maior_dif(v)
-print(ordem_crescente(v))
+print(f"Esta na ordem {'crescente' if ordem(v) == True else 'decrescente'}")
